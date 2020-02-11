@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli|Rubik|Ubuntu&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="app.js" defer></script>
+
+    <title>CODELEX Form</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <header class=" jumbotron">
+
+            <h1>CODELEX FORM</h1>
+        </header>
+
+        <form id="app">
+            <div>
+                <div>
+                    <p>
+                        <ul>
+                            <li v-for="error in errors" class="alert alert-info">{{ error }}</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <section v-if="step == 1" class="form-group green-border-focus personal-details">
+                <h3 class="headings">Tell us about yourself: </h3>
+                <input type="text" placeholder="Your name?" class="form-control form-control" v-model="name" name="name"
+                    required>
+                <input type="text" placeholder="Your surname?" class="form-control form-control" v-model="surname"
+                    name="surname" required>
+                <input type="text" placeholder="In what city do you live?" class="form-control form-control"
+                    v-model="city" name="city" required>
+                <input type="email" placeholder="Your email?" class="form-control form-control" v-model="email"
+                    name="email" required>
+                <input type="text" placeholder="Your phone number?" class="form-control form-control" v-model="phone"
+                    name="phone" required>
+                <label for="date">Your birthday:</label>
+                <input type="date" placeholder="Your birthday?" class="form-control form-control birthdate"
+                    v-model="birthday" name="birthday" required>
+            </section>
+            <section v-if="step == 2">
+                <h3 class="headings">Why do you want to learn coding?</h3>
+                <div class="form-group text-area green-border-focus">
+                    <textarea class="form-control" id="why-learn" v-model="whyLearn" name="whyLearn" rows="4"
+                        required></textarea>
+                </div>
+            </section>
+            <section v-if="step == 3">
+                <h3 class="headings">Which languages would you like to learn?</h3>
+                <div id="languages">
+                    <label class="btn btn-info btn-lg skills" v-for="skill in skills">
+                        <input name="skill" type="checkbox" data-toggle="toggle"> {{skill}}
+                    </label>
+                </div>
+            </section>
+
+            <section class="thank-you" v-if="step == 4">
+                <h4 class="headings">Thank you for your responses!<br><br><br>
+                    Next step - small quiz, before your
+                    application form gets submitted!</h4>
+
+            </section>
+            <section v-if="step == 5">
+                <h4 class="headings">{{questions[ques]}}</h4>
+                <div class="answer-buttons">
+                    <button type="button" class="btn btn-outline-success btn-lg btn-block"
+                        v-for="(answer, index) in answers[ans]" :key="index">{{answer}}</button>
+                </div>
+            </section>
+            <section v-if="step == 6">
+                <h4 class="headings">{{questions[ques]}}</h4>
+                <div class="answer-buttons">
+                    <button type="button" class="btn btn-outline-success btn-lg btn-block"
+                        v-for="(answer, index) in answers[ans]" :key="index">{{answer}}</button>
+                </div>
+            </section>
+            <section v-if="step == 7">
+                <h4 class="headings">{{questions[ques]}}</h4>
+                <div class="answer-buttons">
+                    <button type="button" class="btn btn-outline-success btn-lg btn-block"
+                        v-for="(answer, index) in answers[ans]" :key="index">{{answer}}</button>
+                </div>
+            </section>
+
+            <section class="thank-you" v-if="step == 8">
+                <h4><strong>Thank you!</strong></h4>
+            </section>
+            <div class=navigation-buttons>
+                <button type="button" value="Submit" class="btn btn-success btn-lg btn-block" @click="validate"
+                  v-if="step != totalSteps">Next step</button>
+                <button type="button" class="btn btn-success btn-lg btn-block" @click="previousStep"
+                    v-if="step != 1">Previous step</button>
+                           </div>
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>

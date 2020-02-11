@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  width: auto;
+}
+
+.container {
+  text-align: center;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.jumbotron {
+  margin-top: 10px;
+  height: 40px;
+  background-color: #4caf50;
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  font-weight: 900;
+}
+
+section {
+  min-height: 370px;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  vertical-align: middle;
+}
+
+textarea {
+  margin-top: 90px;
+}
+
+.headings {
+  margin: 35px auto;
+  font-family: "Muli", sans-serif;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+h4 {
+  min-height: 100px;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
+.answer-buttons {
+  margin: 40px 0;
+}
+
+input {
+  width: auto;
+  padding: 7 0;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: "Rubik", sans-serif;
+}
+
+label {
+  font-family: "Rubik", sans-serif;
+  float: left;
+  padding-left: 16px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#languages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.thank-you {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.skills {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
+}
+
+.alert {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 10px;
+  margin: 10px;
+
+}
+
+.navigation-buttons {
+  top: 90%;
+}
+
+.birthdate {
+  color: gray;
+}
+
+.green-border-focus .form-control:focus {
+  border: 1px solid #4caf50;
+  box-shadow: 0 0 0 0.2rem rgba(139, 195, 74, 0.25);
+}
