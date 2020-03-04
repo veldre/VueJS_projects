@@ -1,6 +1,6 @@
 # Application form
 
-Simple dynamic frontend application form made with HTML/CSS/VueJS without any data submitting backend.
+Simple dynamic frontend application form made with JavaScript/HTML/CSS/VueJS without any data submitting backend.
 
 ## Form`s structure
 
