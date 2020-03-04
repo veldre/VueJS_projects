@@ -1,9 +1,22 @@
-# vue_project
+# Monster Deathmatch 
 
-My simple Vue game:
+## Simple but fun browser game made with JavaScript/HTML/CSS/Vue cli 4.1.2.
+
+
+### Characteristics of game :
 
 - single player game
 - posibility to change player name
 - special attacks
 - posibility to get extra special attacks during fight
 - 3 healings per match
+- health bars
+- hit power bars
+- monster`s hits are stronger but player has healings and special attacks
+
+### My Linkedin
+- https://www.linkedin.com/in/jurgis-veldre/
+
+- screenshot:
+
+![Posts wall](gameplay.png)
