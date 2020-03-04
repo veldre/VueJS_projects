@@ -1,6 +1,6 @@
 # Monster Deathmatch 
 
-## Simple but fun browser game made with JavaScript/HTML/CSS/Vue cli 4.1.2.
+## Simple but fun browser game made with JavaScript/HTML/CSS/Bootstrap/Vue cli 4.1.2.
 
 
 ### Characteristics of game :
