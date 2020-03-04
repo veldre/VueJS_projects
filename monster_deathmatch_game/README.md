@@ -13,6 +13,7 @@
 - health bars
 - hit power bars
 - monster`s hits are stronger but player has healings and special attacks
+- logging system for each move made by player and monster
 
 ### My Linkedin
 - https://www.linkedin.com/in/jurgis-veldre/
